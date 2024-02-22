@@ -1,0 +1,13 @@
+package com.ReMoVie;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ReMoVieApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ReMoVieApplication.class, args);
+	}
+
+}
