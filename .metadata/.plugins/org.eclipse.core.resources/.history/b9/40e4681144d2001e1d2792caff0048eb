@@ -1,0 +1,24 @@
+package com.ReMoVie.test;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class TestService {
+
+	private final TestRepository testRepository;
+	
+	public Map<String, Object> test() {
+		Map<String, Object> result = new HashMap<>();
+		
+		
+		return result;
+		
+	}
+	
+}

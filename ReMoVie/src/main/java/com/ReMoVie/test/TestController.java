@@ -7,8 +7,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import lombok.RequiredArgsConstructor;
+
 @Controller
+@RequiredArgsConstructor
 public class TestController {
+	
+	private final TestService testService;
 	
 	@ResponseBody
     @GetMapping("/test1")
@@ -27,7 +32,7 @@ public class TestController {
   	
   	@ResponseBody
   	@GetMapping("/test3")
-  	public Map<String, Object> test3() {
-  		
+  	public Test test3() {
+  		return testService.test(1L);
   	}
 }

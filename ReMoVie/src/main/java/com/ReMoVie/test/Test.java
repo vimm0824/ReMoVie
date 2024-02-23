@@ -20,6 +20,8 @@ public class Test {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@Column(name = "name", nullable = false)
+	private String name;
 	@Column(name = "createdAt", nullable = false)
 	private Date createdAt;
 	@Column(name = "updatedAt", nullable = false)
