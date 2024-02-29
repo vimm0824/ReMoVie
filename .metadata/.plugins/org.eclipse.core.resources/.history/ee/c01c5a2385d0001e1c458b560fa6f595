@@ -1,5 +1,0 @@
-package com.ReMoVie.test;
-
-public interface TestRepository {
-
-}

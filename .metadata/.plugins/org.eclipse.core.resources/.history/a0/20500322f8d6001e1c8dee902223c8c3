@@ -1,0 +1,23 @@
+package com.ReMoVie.infra.openApi;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class TmdbOpenApi {
+
+	public List<Map<String, Object>> getTmdbSearch(String search) {
+		String jsonString = "";
+		String accept = "application/json";
+		String authorization = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMjZjNDA2MTFhMjhlZGFiYzZlOTcwMzAyNzEyNGVlYiIsInN1YiI6IjY1NDRhZDE2NmJlYWVhMDBlYWY2YzIzMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mguPzNsLT0CT2GCM2hzC-vS2UHllTu_ebKDT12-Kmn0";
+		
+		OkHttpClient client = new OkHttpClient();
+
+		List<Map<String, Object>> result = new ArrayList<>();
+		
+		return result;
+	}
+}
