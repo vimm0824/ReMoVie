@@ -1,0 +1,5 @@
+package com.ReMoVie.exception.enums;
+
+public class Response {
+
+}

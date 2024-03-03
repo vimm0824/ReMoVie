@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.ReMoVie.infra.openApi.BoxOfficeOpenApi;
 import com.ReMoVie.infra.openApi.TmdbOpenApi;
 
 import lombok.RequiredArgsConstructor;
@@ -20,6 +21,7 @@ public class TestController {
 	
 	private final TestService testService;
 	private final TmdbOpenApi tmdbOpenApi;
+	private final BoxOfficeOpenApi boxOfficeOpenApi;
 	
 	@ResponseBody
     @GetMapping("/test1")
@@ -50,6 +52,16 @@ public class TestController {
   		List<Map<String, Object>> result = new ArrayList<>();
   		
   		result = tmdbOpenApi.getTmdbSearch(search);
+  		
+  		return result;
+  	}
+  	
+  	@ResponseBody
+  	@GetMapping("/test5")
+  	public List<Map<String, Object>> test5() {
+  		List<Map<String, Object>> result = new ArrayList<>();
+  		
+  		result = boxOfficeOpenApi.getDailyBoxOffice();
   		
   		return result;
   	}

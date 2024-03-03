@@ -20,11 +20,12 @@ public class TmdbOpenApi {
 		String jsonString = "";
 		String accept = "application/json";
 		String authorization = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMjZjNDA2MTFhMjhlZGFiYzZlOTcwMzAyNzEyNGVlYiIsInN1YiI6IjY1NDRhZDE2NmJlYWVhMDBlYWY2YzIzMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mguPzNsLT0CT2GCM2hzC-vS2UHllTu_ebKDT12-Kmn0";
+		String url = "https://api.themoviedb.org/3/search/multi?include_adult=false&language=ko-KR&page=1&query=";
 		
 		OkHttpClient client = new OkHttpClient();
 		
 		Request request = new Request.Builder()
-				  .url("https://api.themoviedb.org/3/search/multi?include_adult=false&language=ko-KR&page=1&query=" + search)
+				  .url(url + search)
 				  .get()
 				  .addHeader("accept", accept)
 				  .addHeader("Authorization", authorization)

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.ReMoVie.infra.entity.Review&apos; to &apos;ReviewEntity&apos;&#x0A;- Original project: &apos;ReMoVie&apos;&#x0A;- Original element: &apos;com.ReMoVie.infra.entity.Review&apos;&#x0A;- Renamed element: &apos;com.ReMoVie.infra.entity.ReviewEntity&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Review&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/gradle_scope=/main=/=/gradle_used_by_scope=/main,test=/&lt;com.ReMoVie.infra.entity{Review.java[Review" matchStrategy="1" name="ReviewEntity" qualified="false" references="true" similarDeclarations="false" stamp="1709474623021" textual="false" version="1.0"/>
+</session>
