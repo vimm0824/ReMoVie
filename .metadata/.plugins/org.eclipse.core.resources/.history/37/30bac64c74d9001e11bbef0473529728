@@ -1,0 +1,5 @@
+package com.ReMoVie.infra.controller.ui;
+
+public class GiftUiController {
+
+}
