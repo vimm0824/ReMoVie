@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>test ReMoVie</title>
+</head>
+<body>
+    <!-- s:: main-->
+    <div class="container">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+            </div>
+        </div>
+    </div>
+    <!-- e:: main -->
+
+    <th:block th:replace="layouts/footer :: footerFragment"></th:block>
+</body>
+</html>

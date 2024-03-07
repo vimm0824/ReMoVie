@@ -1,0 +1,41 @@
+package com.ReMoVie.test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+import com.ReMoVie.infra.openApi.BoxOfficeOpenApi;
+import com.ReMoVie.infra.openApi.TmdbOpenApi;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class TestService {
+
+	private final TestRepository testRepository;
+	private final BoxOfficeOpenApi boxOpenApi;
+	private final TmdbOpenApi tmdbOpenApi;
+	
+	public Test test(Long i) {
+		Test result = testRepository.findById(i).orElse(null);
+		
+		return result;
+		
+	}
+	
+	public List<String> testImagePath() {
+		List<Map<String, Object>> mapList = boxOpenApi.getDailyBoxOffice();
+		List<String> strList = new ArrayList<>();
+		
+		for (Map<String, Object> m : mapList) {
+			List<Map<String, Object>> l = tmdbOpenApi.getTmdbSearch((String)m.get("movieNm"));
+			
+			strList.add((String)l.get(0).get("poster_path"));
+		}
+		
+		return strList; 
+	}
+}

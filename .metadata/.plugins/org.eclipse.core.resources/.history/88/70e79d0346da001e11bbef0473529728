@@ -1,0 +1,26 @@
+package com.ReMoVie.infra.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity
+@Table(name="follow")
+@NoArgsConstructor
+@AllArgsConstructor
+public class FollowEntity {
+
+	@Column(name = "userId", nullable = false)
+	private Long userId;
+	@Column(name = "followerId", nullable = false)
+	private Long followerId;
+	@Column(name = "createdAt", nullable = false)
+	private Date createdAt;
+}

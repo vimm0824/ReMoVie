@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -65,4 +66,14 @@ public class TestController {
   		
   		return result;
   	}
+  	
+  	@GetMapping("/test6")
+  	public String test6(Model model) {
+  		model.addAttribute("viewName", "testReMoVie");
+  		
+  		List<String> strList = testService.testImagePath();
+  		model.addAttribute("strList", strList);
+  		return "test/test";
+  	}
+  	
 }
