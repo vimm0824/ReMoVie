@@ -23,12 +23,13 @@ public class BoxOfficeOpenApi {
 		String jsonString = "";
 		String url = " http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json";
 		String key = "key=0a3d75ef1d272ded4accb0dcb474129a";
-		String targetDate = "targetDt=20240228";
+		String targetDate = "targetDt=";
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 		Calendar day = Calendar.getInstance();
 		day.add(Calendar.DATE, -1);
-		String date = sdf.format(day.getTime());
+		targetDate += sdf.format(day.getTime());
+		
 		
 		OkHttpClient client = new OkHttpClient();
 		

@@ -29,12 +29,20 @@ public class TestService {
 	public List<String> testImagePath() {
 		List<Map<String, Object>> mapList = boxOpenApi.getDailyBoxOffice();
 		List<String> strList = new ArrayList<>();
+		List<String> nameList = new ArrayList<>();
 		
 		for (Map<String, Object> m : mapList) {
 			String movieNm = (String)m.get("movieNm");
-			List<Map<String, Object>> l = tmdbOpenApi.getTmdbSearch(movieNm);
-			
-			strList.add("https://image.tmdb.org/t/p/original" + (String)l.get(0).get("poster_path"));
+			nameList.add(movieNm);
+		}
+		
+		for (String name : nameList) {
+			if (name.contains(":")) {
+				String[] s = name.split(":");
+				name = s[0];
+			}
+			String poster = tmdbOpenApi.getTmdbSearch(name).get(0).get("poster_path").toString();
+			strList.add("https://image.tmdb.org/t/p/original" + poster);
 		}
 		
 		return strList; 

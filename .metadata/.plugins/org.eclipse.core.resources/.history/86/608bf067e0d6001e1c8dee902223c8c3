@@ -1,5 +1,0 @@
-package com.ReMoVie.infra.controller.api.openApi;
-
-public class TmdbOpenApi {
-
-}

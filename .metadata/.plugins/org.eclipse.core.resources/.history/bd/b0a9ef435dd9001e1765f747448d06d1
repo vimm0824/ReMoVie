@@ -1,5 +1,0 @@
-package com.ReMoVie.exception;
-
-public interface ErrorCode {
-
-}

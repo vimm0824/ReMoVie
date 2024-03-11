@@ -1421,3 +1421,9 @@ Binding(COMMAND+R,
 
 !ENTRY org.eclipse.m2e.jdt 4 0 2024-03-06 17:22:51.501
 !MESSAGE Failed to identify file by its hash using search.maven.org: /Users/guyungi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.25/c69815e7931cd3ce7f19cc8028fd1c36626120d6/spring-web-5.3.25.jar
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-03-11 21:27:50.318
+!MESSAGE [Info]	ESLint server running in node v18.12.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-03-11 21:27:50.484
+!MESSAGE [Info]	No ES Libary found for file: file:///Users/guyungi/Desktop/ReMoVie/workspace/ReMoVie/src/main/resources/application.yml
